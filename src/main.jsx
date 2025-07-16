@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 
-export const serverUrl = "https://chatlify-backend.onrender.com";
+export const serverUrl = "http://localhost:8000";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Provider store={store}>
