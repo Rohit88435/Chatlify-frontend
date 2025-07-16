@@ -126,10 +126,10 @@ function SideBar() {
         )}
       </div>
       {input.length > 0 && (
-        <div className="flex w-full px-[10px] py-[5px] h-[250px] overflow-y-auto flex-col gap-[10px] absolute top-[38%] z-100 justify-center items-center bg-white">
+        <div className="flex w-full px-[20px] py-[5px] h-[280px] overflow-y-auto flex-col  gap-[20px] absolute top-[38%] z-100 justify-start items-center bg-white">
           {searchData?.map((user) => (
             <div
-              className="w-full  h-[50px] flex justify-start items-center gap-[20px] bg-white  hover:bg-[#7fe5ff] border-b-1"
+              className="w-full py-[5px] h-[50px] flex justify-start items-center gap-[20px] bg-white  hover:bg-[#7fe5ff] space-y-1 border-b-1 "
               onClick={() => {
                 dispatch(setSelectedUser(user));
                 setInput("");
@@ -153,7 +153,7 @@ function SideBar() {
         </div>
       )}
       <div
-        className="w-[60px] h-[60px] rounded-full  shadow-lg bg-[#20c7ff] shadow-gray-400  cursor-pointer overflow-hidden flex justify-center items-center absolute bottom-5 left-4  "
+        className="w-[60px] z-100 h-[60px] rounded-full  shadow-lg bg-[#20c7ff] shadow-gray-400  cursor-pointer overflow-hidden flex justify-center items-center absolute bottom-5 left-4  "
         onClick={() => {
           handleLogout();
         }}
@@ -161,10 +161,10 @@ function SideBar() {
         <CgLogOut className="w-[25px] h-[25px]" />
       </div>
 
-      <div className=" w-full h-[50%]  overflow-auto flex flex-col gap-[10px] px-[10px] mt-[10px] items-center  cursor-pointer">
+      <div className=" w-full h-[58%] pb-[30px]  overflow-y-scroll flex flex-col gap-[10px] px-[10px] mt-[10px] items-center  cursor-pointer">
         {otherUsers?.map((user) => (
           <div
-            className="w-[95%] h-[60px] flex justify-start items-center gap-[20px] bg-white shadow-gray-500 shadow-lg rounded-[20px] hover:bg-[#7fe5ff]"
+            className="w-[95%] h-[70px] py-[10px] flex justify-start items-center gap-[20px] bg-white shadow-gray-500 shadow-lg rounded-[20px] hover:bg-[#7fe5ff]"
             onClick={() => {
               dispatch(setSelectedUser(user));
             }}
